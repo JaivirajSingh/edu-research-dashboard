@@ -3,8 +3,15 @@ import StoryData from "./data/storyData"
 import Act1Chart from "./components/Act1Chart"
 import Act2Chart from "./components/Act2Chart"
 
+const chartRegistry = {
+    act1: Act1Chart,
+    act2: Act2Chart
+}
+
 export default function App() {
     const [actState, setActState] = React.useState("act1")
+
+    const activeChart = chartRegistry[actState]
 
     // Scrolls through the 2 acts
     const storyEl = Object.values(StoryData).map((story) => {
@@ -51,11 +58,7 @@ export default function App() {
                 
                 {/* Right column is charts */}
                 <div className="right">
-                    {actState === "act1" ? (
-                        <Act1Chart stats={StoryData.act1.stats} />
-                    ) : (
-                        <Act2Chart stats={StoryData.act2.stats} />
-                    )}
+                    <activeChart stats={StoryData[actState].stats} />
                 </div>
             </div>
         </>
