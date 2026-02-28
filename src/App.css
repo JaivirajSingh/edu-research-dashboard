@@ -205,6 +205,46 @@ button {
     width: 100%;
 }
 
+/* Photogrid styles */
+.photo-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.photo-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+.photo-item {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    break-inside: avoid; /* Prevents images from splitting across columns */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+    /* The Starting State for the Fade-In */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* The End State triggered by the Intersection Observer */
+.photo-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* --- FOOTER STYLES --- */
 .footer-container {
     width: 100vw;
@@ -306,6 +346,10 @@ button {
         margin-top: 10px;
         padding: 8px 16px;
         font-size: 0.9rem;
+    }
+
+    .masonry-grid {
+        column-count: 1; /* Stacks images vertically on phones */
     }
 
     .methodology-grid {
