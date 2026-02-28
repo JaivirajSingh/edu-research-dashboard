@@ -6,31 +6,28 @@ import { Tooltip } from "chart.js/auto"
 export default function Act1Chart({ stats }) {
     const [showReality, setShowReality] = React.useState(false)
 
-    const datasets = [
-        {
-            label: "Official Separate Toilets",
-            data: [stats.urban.separateToilets, stats.rural.separateToilets],
-            backgroundColor: "rgba(156, 163, 175, 0.8)"
-        }
-    ]
-
-    if (showReality) {
-        datasets.push(
-            {
-                label: "Always Clean Toilets",
-                data: [stats.urban.cleanToilets, stats.rural.cleanToilets],
-                backgroundColor: "rgba(239, 68, 68, 0.8)"
-            },
-            {
-                label: "Running Water",
-                data: [stats.urban.runningWater, stats.rural.runningWater],
-                backgroundColor: "rgba(245, 158, 11, 0.8)"
-            }
-        )
+    const baseDataset = {
+        label: "Official Separate Toilets",
+        data: [stats.urban.separateToilets, stats.rural.separateToilets],
+        backgroundColor: "rgba(148, 163, 184, 0.8)" 
     }
+
+    const realityDatasets = [
+        {
+            label: "Always Clean Toilets",
+            data: [stats.urban.cleanToilets, stats.rural.cleanToilets],
+            backgroundColor: "rgba(244, 63, 94, 0.8)"
+        },
+        {   
+            label: "Running Water",
+            data: [stats.urban.runningWater, stats.rural.runningWater],
+            backgroundColor: "rgba(245, 158, 11, 0.8)"
+        }
+    ]  
+
     const chartData = {
         labels: ["Urban Schools", "Rural Schools"],
-        datasets: datasets
+        datasets: showReality ? [baseDataset, ...realityDatasets] : [baseDataset]
     }
 
     const options = {
