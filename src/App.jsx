@@ -20,9 +20,6 @@ export default function App() {
     const ActiveChart = chartRegistry[actState]
     if (!ActiveChart) return <div className="right">Loading or Error...</div>
     
-    // Scrolls through the 2 acts
-
-
     // Makes changes to the charts when the user scrolls through acts using IntersectionObserver
     React.useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
