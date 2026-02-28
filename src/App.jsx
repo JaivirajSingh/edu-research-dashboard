@@ -3,6 +3,7 @@ import StoryData from "./data/storyData"
 import Act1Chart from "./components/Act1Chart"
 import Act2Chart from "./components/Act2Chart"
 import StoryBlock from "./components/StoryBlock"
+import Hero from "./components/Hero"
 
 const chartRegistry = {
     act1: Act1Chart,
@@ -35,6 +36,7 @@ export default function App() {
 
     return (
         <>
+            <Hero />
             <div className="master">
 
                 {/* Left column is narrative */}
