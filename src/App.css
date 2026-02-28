@@ -232,11 +232,17 @@ button {
     margin-bottom: 1.5rem;
     break-inside: avoid; /* Prevents images from splitting across columns */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, scale 0.3s ease;
     
     /* The Starting State for the Fade-In */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.photo-item:hover {
+    scale: 1.02
 }
 
 /* The End State triggered by the Intersection Observer */
@@ -327,7 +333,7 @@ button {
 
     .right {
         order: 1;
-        height: 45vh;
+        height: 45dvh;
         top: 0;
         z-index: 1;
         background-color: #f8fafc;
