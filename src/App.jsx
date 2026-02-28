@@ -12,7 +12,8 @@ export default function App() {
     const [actState, setActState] = React.useState("act1")
 
     const ActiveChart = chartRegistry[actState]
-
+    if (!ActiveChart) return <div className="right">Loading or Error...</div>
+    
     // Scrolls through the 2 acts
     const storyEl = Object.values(StoryData).map((story) => {
         return (
