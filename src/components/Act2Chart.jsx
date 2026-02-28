@@ -9,13 +9,13 @@ export default function Act2Chart({ stats }) {
             {
                 label: "Average Experience (Years)",
                 data: [stats.urban.experience, stats.rural.experience],
-                backgroundColor: "rgba(0, 0, 255, 1)",
+                backgroundColor: "rgba(79, 70, 229, 0.9)",
                 yAxisID: "y"
             },
             {
                 label: "% of Teachers Who NEVER Use Digital Tools",
                 data: [stats.urban.techNeverUsed, stats.rural.techNeverUsed],
-                backgroundColor: "rgba(255, 0, 0, 1)",
+                backgroundColor: "rgba(225, 29, 72, 0.9)",
                 yAxisID: "y1"
             }
         ]
