@@ -41,6 +41,28 @@ const StoryData = {
                 techNeverUsed: 40
             }
         }
+    }, 
+    "act3": {
+        id: "act3",
+        title: "The Final Outcome",
+        description: "Despite crumbling infrastructure and severe economic hardship, rural schools successfully push a higher percentage of their graduates into higher education. Urban schools, plagued by inexperienced staff, lose a significant portion of their students simply to a 'lack of interest.'",
+        quote: [
+            {text: "Dropout rates among rural girls notably increased after Class 8, reflecting the compounding effect of gendered socio-economic pressures."}
+        ],
+        stats: {
+            urban: {
+                label: "Urban Schools",
+                higherEd: 33.3, // % of schools reporting >60% progression
+                dropoutEconomic: 9.1, // % citing Economic Hardship
+                dropoutApathy: 18.2 // % citing Lack of Interest
+            },
+            rural: {
+                label: "Rural Schools",
+                higherEd: 66.6,
+                dropoutEconomic: 36.0,
+                dropoutApathy: 12.0
+            }
+        }
     }
 }
 
