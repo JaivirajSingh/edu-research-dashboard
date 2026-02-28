@@ -5,6 +5,7 @@ import Act2Chart from "./components/Act2Chart"
 import Act3Chart from "./components/Act3Chart"
 import StoryBlock from "./components/StoryBlock"
 import Hero from "./components/Hero"
+import Footer from "./components/Footer"
 
 const chartRegistry = {
     act1: Act1Chart,
@@ -53,6 +54,7 @@ export default function App() {
                     <ActiveChart stats={StoryData[actState].stats} />
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
