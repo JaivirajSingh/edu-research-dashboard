@@ -2,6 +2,7 @@ import React from "react"
 import StoryData from "./data/storyData"
 import Act1Chart from "./components/Act1Chart"
 import Act2Chart from "./components/Act2Chart"
+import StoryBlock from "./components/StoryBlock"
 
 const chartRegistry = {
     act1: Act1Chart,
@@ -15,23 +16,7 @@ export default function App() {
     if (!ActiveChart) return <div className="right">Loading or Error...</div>
     
     // Scrolls through the 2 acts
-    const storyEl = Object.values(StoryData).map((story) => {
-        return (
-            <div key={story.id} id={story.id} className="story-section">
-                <span>{story.id}</span>
-                <h1>{story.title}</h1>
-                <p>{story.description}</p>
 
-                <blockquote>
-                    {story.quote.map((q, index) => (
-                        <div key={index}>
-                            <p>"{q.text}"</p>
-                        </div>
-                    ))}
-                </blockquote>
-            </div>
-        )
-    }) 
 
     // Makes changes to the charts when the user scrolls through acts using IntersectionObserver
     React.useEffect(() => {
@@ -54,7 +39,9 @@ export default function App() {
 
                 {/* Left column is narrative */}
                 <div className="left">
-                    {storyEl}
+                    {Object.values(StoryData).map((story) => (
+                        <StoryBlock key={story.id} story={story} />
+                    ))}
                 </div>
                 
                 {/* Right column is charts */}
