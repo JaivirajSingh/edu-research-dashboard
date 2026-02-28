@@ -50,7 +50,9 @@ export default function App() {
                 
                 {/* Right column is charts */}
                 <div className="right">
-                    <ActiveChart stats={StoryData[actState].stats} />
+                    <div key={actState} className="chart-transition-wrapper">
+                        <ActiveChart stats={StoryData[actState].stats} />
+                    </div>
                 </div>
             </div>
             <Footer />

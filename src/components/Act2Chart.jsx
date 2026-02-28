@@ -24,6 +24,9 @@ export default function Act2Chart({ stats }) {
     const options = {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+            duration: 800
+        },
         plugins: {
             legend: { position: "top" }
         },

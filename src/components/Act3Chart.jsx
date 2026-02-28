@@ -23,6 +23,9 @@ export default function Act3Chart({ stats }) {
     const options = {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+            duration: 800
+        },
         plugins: {
             legend: { position: "top", labels: { font: { family: "Inter", size: 13 } } },
             tooltip: { backgroundColor: "rgba(15, 23, 42, 0.9)", padding: 12 }
