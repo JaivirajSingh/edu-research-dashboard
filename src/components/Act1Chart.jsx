@@ -68,7 +68,7 @@ export default function Act1Chart({ stats }) {
     }
 
     return (
-        <div style={{width: "90%", height: "450px", padding: "20px"}}>
+        <div className="chart-container">
             <Bar data={chartData} options={options}/>
             <button onClick={() => setShowReality(!showReality)}>
                 {showReality ? "Hide Reality" : "Reveal Reality"}

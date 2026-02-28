@@ -82,6 +82,12 @@ body {
     justify-content: center;
 }
 
+.chart-container {
+    width: 90%;
+    height: 450px;
+    padding: 20px;
+}
+
 button {
     margin-top: 20px;
     padding: 10px 20px;
