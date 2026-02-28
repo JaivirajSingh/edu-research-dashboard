@@ -11,7 +11,7 @@ const chartRegistry = {
 export default function App() {
     const [actState, setActState] = React.useState("act1")
 
-    const activeChart = chartRegistry[actState]
+    const ActiveChart = chartRegistry[actState]
 
     // Scrolls through the 2 acts
     const storyEl = Object.values(StoryData).map((story) => {
@@ -58,7 +58,7 @@ export default function App() {
                 
                 {/* Right column is charts */}
                 <div className="right">
-                    <activeChart stats={StoryData[actState].stats} />
+                    <ActiveChart stats={StoryData[actState].stats} />
                 </div>
             </div>
         </>
