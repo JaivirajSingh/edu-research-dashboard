@@ -6,6 +6,7 @@ import Act3Chart from "./components/Act3Chart"
 import StoryBlock from "./components/StoryBlock"
 import Hero from "./components/Hero"
 import Footer from "./components/Footer"
+import ProgressBar from "./components/ProgressBar"
 
 const chartRegistry = {
     act1: Act1Chart,
@@ -39,6 +40,7 @@ export default function App() {
 
     return (
         <>
+            <ProgressBar />
             <Hero />
             <div className="master">
 
