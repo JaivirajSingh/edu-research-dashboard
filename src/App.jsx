@@ -1,13 +1,15 @@
 import React from "react"
-import StoryData from "./data/storyData"
+import StoryData from "./storyData"
 import Act1Chart from "./components/Act1Chart"
 import Act2Chart from "./components/Act2Chart"
+import Act3Chart from "./components/Act3Chart"
 import StoryBlock from "./components/StoryBlock"
 import Hero from "./components/Hero"
 
 const chartRegistry = {
     act1: Act1Chart,
-    act2: Act2Chart
+    act2: Act2Chart,
+    act3: Act3Chart
 }
 
 export default function App() {
