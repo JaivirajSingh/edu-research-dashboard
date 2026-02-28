@@ -115,10 +115,17 @@ button {
         padding-top: 1rem;
     }
 
+    .chart-container {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+
     .left {
         order: 2;
         z-index: 10;
         padding: 0;
+        pointer-events: none;
     }
 
     .story-section {
@@ -130,9 +137,16 @@ button {
         border-radius: 16px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
         border: 1px solid rgba(0,0,0,0.05);
+        pointer-events: auto;
     }
     
     .story-section:last-child {
         margin-bottom: 20vh;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
