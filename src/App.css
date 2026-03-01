@@ -324,7 +324,7 @@ button {
         order: 1;
         position: sticky;
         top: 0;
-        height: 50dvh; /* Claims the top half of the screen */
+        height: 35dvh; /* Claims the top of the screen */
         width: 100%;
         z-index: 20; /* Commands the stacking context */
         background-color: var(--bg-primary, #f8fafc); 

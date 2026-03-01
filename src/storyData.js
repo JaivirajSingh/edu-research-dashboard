@@ -1,66 +1,68 @@
 const StoryData = {
     "act1": {
         id: "act1",
-        title: "The Urban Decay",
-        description: "While urban schools are assumed to have better infrastructure, the data reveals a severe maintenance crisis compared to rural stability.",
+        title: "The Infrastructure Paradox",
+        description: "The assumption that urban proximity guarantees a superior learning environment is flawed. While urban schools possess the hardware—laboratories and electricity—they buckle under overcrowding and poor maintenance. Conversely, rural schools manage their limited basic sanitation exceptionally well, but suffer from a severe scarcity of classrooms and scientific facilities.",
         quote: [
-            {text: "One student mentioned that doors were missing for washrooms in their school"},
-            {text: "A large number of students complained about the poor quality of washrooms"}
+            {text: "Only 27.3% of urban school toilets are consistently clean, a failure of maintenance driven by severe overcrowding."},
+            {text: "Rural schools demonstrate high compliance in basic sanitation but face acute shortages of classroom space, forcing multi-grade teaching arrangements."}
         ],
         stats: {
             urban: {
                 label: "Urban Schools",
-                separateToilets: 78.1,
-                cleanToilets: 53.1,
-                runningWater: 59.4
+                separateToilets: 78.8, // From Table 3
+                cleanToilets: 27.3, // From Table 3
+                runningWater: 30.3 // From Table 3
             },
             rural: {
                 label: "Rural Schools",
-                separateToilets: 100,
-                cleanToilets: 89.3,
-                runningWater: 92.9
+                separateToilets: 100, // From Table 3
+                cleanToilets: 78.0, // From Table 3
+                runningWater: 90.2 // From Table 3
             }
         }
     },
     "act2": {
         id: "act2",
-        title: "The Pedagogy Paradox",
-        description: "The data shatters the myth that urban schools offer better learning environments through technology. Digital adoption is uniformly poor across the board, but rural schools compensate with veteran educators. Urban students, meanwhile, face a revolving door of inexperienced staff.",
+        title: "The Administrative Burden",
+        description: "The urban teaching advantage is largely a mirage. Despite having better digital resources, urban educators are crushed by non-academic duties—election work, census data, and bureaucratic reporting—drastically reducing instructional time. Meanwhile, rural schools suffer from acute staff shortages, forcing veteran educators to juggle multiple subjects outside their expertise.",
         quote: [
-            {text: "A lot of students said that they liked their teachers when asked about one thing they like about their school"}
+            {text: "Urban teachers face an 'administrative overload' that directly crowds out lesson planning and personalised pedagogical engagement."},
+            {text: "With a 10-year average experience advantage, rural teachers leverage strong community relationships to offset the lack of digital learning tools."}
         ],
         stats: {
             urban: {
                 label: "Urban Teachers",
-                experience: 4, //Avg years of experience
-                techNeverUsed: 50, // % who 'Never' use digital tools
+                experience: 3.3, // From Table 6
+                techNeverUsed: 40, // From Table 5
             },
             rural: {
                 label: "Rural Teachers",
-                experience: 14.5, 
-                techNeverUsed: 40
+                experience: 10.3, // From Table 6
+                techNeverUsed: 40 // From Table 5
             }
         }
     }, 
     "act3": {
         id: "act3",
-        title: "The Final Outcome",
-        description: "Despite crumbling infrastructure and severe economic hardship, rural schools successfully push a higher percentage of their graduates into higher education. Urban schools, plagued by inexperienced staff, lose a significant portion of their students simply to a 'lack of interest.'",
+        title: "The Attrition Divide",
+        description: "Dropout drivers reveal a stark geographic and gendered divide. In rural areas, severe economic hardship and domestic labour obligations systematically strip adolescent girls from the education system post-Class 8. In contrast, urban attrition is not driven primarily by poverty, but by a lack of parental support and sheer apathy toward the curriculum.",
         quote: [
-            {text: "Dropout rates among rural girls notably increased after Class 8, reflecting the compounding effect of gendered socio-economic pressures."}
+            {text: "18.2% of urban dropouts stem purely from a 'lack of interest'—an indictment of an overcrowded, unengaging system."},
+            {text: "For rural female students, the intersection of poverty and domestic expectations creates insurmountable barriers to secondary education."}
         ],
         stats: {
             urban: {
                 label: "Urban Schools",
-                higherEd: 33.3, // % of schools reporting >60% progression
-                dropoutEconomic: 9.1, // % citing Economic Hardship
-                dropoutApathy: 18.2 // % citing Lack of Interest
+                higherEd: 33.3, // From Table 7 (Above 80% bracket)
+                dropoutEconomic: 9.1, // From Table 10
+                dropoutApathy: 18.2 // From Table 10
             },
             rural: {
                 label: "Rural Schools",
-                higherEd: 66.6,
-                dropoutEconomic: 36.0,
-                dropoutApathy: 12.0
+                higherEd: 33.3, // From Table 7 (Above 80% bracket)
+                dropoutEconomic: 36.0, // From Table 10
+                dropoutApathy: 12.0 // From Table 10
             }
         }
     }
