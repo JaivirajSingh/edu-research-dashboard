@@ -28,7 +28,7 @@ export default function App() {
                     setActState(entry.target.id)
                 }
             });
-        }, {rootMargin:"-60% 0px -40% 0px"})
+        }, {rootMargin:"-65% 0px -35% 0px"})
 
         const sections = document.querySelectorAll(".story-section")
         sections.forEach((section) => observer.observe(section))
