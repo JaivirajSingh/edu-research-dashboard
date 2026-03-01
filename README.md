@@ -7,7 +7,7 @@ This dashboard is the technical implementation of the Major Project Report: **"A
 
 ## Technical Stack
 - **Framework:** React.js (via Vite)
-- **Visualization:** Chart.js 
+- **Visualisation:** Chart.js 
 - **Styling:** CSS
 
 ## Data Management & Architecture
